@@ -4,8 +4,7 @@
 
 # parsing & download
 jcode_jota_latest_link="https://github.com/Sabro98/jcode-jota/releases/latest/download/jcode-jota.vsix"
-wget $jcode_jota_latest_link
-mv jcode-jota.vsix ./extension/jcode-jota.vsix
+wget -P ~/.local/share/code-server/extensions/ $jcode_jota_latest_link #extension 디렉토리로 바로 다운로드
 
 # install
 code-server --install-extension ./extension/jcode-jota.vsix
